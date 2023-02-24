@@ -10,15 +10,6 @@ final readonly class Arr
      * @param array<mixed> $source
      * @param non-empty-string $key
      */
-    public static function get(array $source, string $key, mixed $default = null): mixed
-    {
-        return UnsafeArr::get($source, $key, $default);
-    }
-
-    /**
-     * @param array<mixed> $source
-     * @param non-empty-string $key
-     */
     public static function has(array $source, string $key): bool
     {
         return UnsafeArr::has($source, $key);
@@ -29,8 +20,8 @@ final readonly class Arr
      * @param non-empty-string $key
      * @param non-empty-string $separator
      */
-    public static function getDeep(array $source, string $key, mixed $default = null, string $separator = '.'): mixed
+    public static function get(array $source, string $key, mixed $default = null, string $separator = '.'): mixed
     {
-        return UnsafeArr::getDeep($source, $key, $default, $separator);
+        return UnsafeArr::get($source, $key, $default, $separator);
     }
 }

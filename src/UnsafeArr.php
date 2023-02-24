@@ -11,28 +11,21 @@ final readonly class UnsafeArr
     /**
      * @param array<mixed> $source
      * @param non-empty-string $key
+     * @param non-empty-string $separator
      */
-    public static function get(array &$source, string $key, mixed $default = null): mixed
+    public static function has(array &$source, string $key, string $separator = '.'): bool
     {
-        return $source[$key] ?? $default;
+        return InDeepFinder::has($source, $key, $separator);
     }
 
     /**
-     * @param array<mixed> $source
-     * @param non-empty-string $key
-     */
-    public static function has(array &$source, string $key): bool
-    {
-        return isset($source[$key]);
-    }
-
-    /**
+     * @link Arr::get()
      * @param array<mixed> $source
      * @param non-empty-string $key
      * @param non-empty-string $separator
      */
-    public static function getDeep(array &$source, string $key, mixed $default = null, string $separator = '.'): mixed
+    public static function get(array &$source, string $key, mixed $default = null, string $separator = '.'): mixed
     {
-        return InDeepFinder::find($key, $source, $separator) ?? $default;
+        return InDeepFinder::get($source, $key, $separator) ?? $default;
     }
 }
