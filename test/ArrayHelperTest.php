@@ -23,6 +23,6 @@ final class ArrayHelperTest extends TestCase
             ]
         ];
 
-        $this->assertSame(Arr::getDeep( $arr, 'first.second.third'), 'value');
+        $this->assertSame(Arr::getDeep($arr, 'first.second.third'), 'value');
     }
 }

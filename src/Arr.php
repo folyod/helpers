@@ -4,26 +4,24 @@ declare(strict_types=1);
 
 namespace Folyod\Helpers;
 
-use Folyod\Helpers\Services\InDeepFinder;
-
-final class Arr
+final readonly class Arr
 {
     /**
      * @param array<mixed> $source
      * @param non-empty-string $key
      */
-    public static function get(array &$source, string $key, mixed $default = null): mixed
+    public static function get(array $source, string $key, mixed $default = null): mixed
     {
-        return $source[$key] ?? $default;
+        return UnsafeArr::get($source, $key, $default);
     }
 
     /**
      * @param array<mixed> $source
      * @param non-empty-string $key
      */
-    public static function has(array &$source, string $key): bool
+    public static function has(array $source, string $key): bool
     {
-        return isset($source[$key]);
+        return UnsafeArr::has($source, $key);
     }
 
     /**
@@ -31,8 +29,8 @@ final class Arr
      * @param non-empty-string $key
      * @param non-empty-string $separator
      */
-    public static function getDeep(array &$source, string $key, mixed $default = null, string $separator = '.'): mixed
+    public static function getDeep(array $source, string $key, mixed $default = null, string $separator = '.'): mixed
     {
-        return InDeepFinder::find($key, $source, $separator) ?? $default;
+        return UnsafeArr::getDeep($source, $key, $default, $separator);
     }
 }
