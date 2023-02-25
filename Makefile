@@ -9,3 +9,9 @@ linter:
 
 stan:
 	@vendor/bin/phpstan analyse -l 9 src --memory-limit=-1
+
+check:
+	make linter
+	male stan
+	make tests
+
