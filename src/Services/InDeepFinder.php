@@ -8,8 +8,8 @@ final class InDeepFinder
 {
     /**
      * @param array<mixed> $source
-     * @param non-empty-string $key
      * @param non-empty-string $separator
+     * @param non-empty-string $key
      */
     public static function get(array &$source, string $key, string $separator = '.'): mixed
     {
@@ -18,6 +18,11 @@ final class InDeepFinder
         return self::getForKeys($source,$paths);
     }
 
+    /**
+     * @param array<mixed> $source
+     * @param non-empty-string $separator
+     * @param non-empty-string $key
+     */
     public static function has(array &$source, string $key, string $separator = '.'): bool
     {
         $paths = explode($separator, $key);

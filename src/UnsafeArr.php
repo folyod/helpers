@@ -9,6 +9,8 @@ use Folyod\Helpers\Services\InDeepFinder;
 final readonly class UnsafeArr
 {
     /**
+     * @see Arr::has()
+     *
      * @param array<mixed> $source
      * @param non-empty-string $key
      * @param non-empty-string $separator
@@ -19,7 +21,8 @@ final readonly class UnsafeArr
     }
 
     /**
-     * @link Arr::get()
+     * @see Arr::get()
+     *
      * @param array<mixed> $source
      * @param non-empty-string $key
      * @param non-empty-string $separator

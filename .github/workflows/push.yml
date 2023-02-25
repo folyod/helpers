@@ -1,12 +1,12 @@
-name: Run static analysis
+name: Run a correctness check
 
 on:
   pull_request:
   push:
 
 jobs:
-  php-stan:
-    name: PHPStan
+  onPush:
+    name: Run a correctness check
 
     strategy:
       matrix:
@@ -40,5 +40,11 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
 
-      - name: Run PHPStan
-        run: make phpstan
+      - name: Run linter
+        run: make linter
+
+      - name: Run static anilysis
+        run: make stan
+
+      - name: Run tests
+        run: make tests

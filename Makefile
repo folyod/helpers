@@ -1,11 +1,11 @@
-phpunit:
+tests:
 	@vendor/bin/phpunit test
 
-phpcbf:
+linterfix:
 	@vendor/bin/phpcbf src
 
-phpcs:
+linter:
 	@vendor/bin/phpcs --standard=PSR12 src
 
-phpstan:
+stan:
 	@vendor/bin/phpstan analyse -l 9 src --memory-limit=-1
