@@ -7,7 +7,7 @@ namespace Folyod\Helpers\Services;
 final class InDeepFinder
 {
     /**
-     * @param array<mixed> $source
+     * @param array<mixed>     $source
      * @param non-empty-string $separator
      * @param non-empty-string $key
      */
@@ -15,11 +15,11 @@ final class InDeepFinder
     {
         $paths = explode($separator, $key);
 
-        return self::getForKeys($source,$paths);
+        return self::getForKeys($source, $paths);
     }
 
     /**
-     * @param array<mixed> $source
+     * @param array<mixed>     $source
      * @param non-empty-string $separator
      * @param non-empty-string $key
      */
@@ -27,11 +27,11 @@ final class InDeepFinder
     {
         $paths = explode($separator, $key);
 
-        return self::hasForKeys($source,$paths);
+        return self::hasForKeys($source, $paths);
     }
 
     /**
-     * @param array<mixed> $source
+     * @param array<mixed>            $source
      * @param array<non-empty-string> $keys
      */
     private static function getForKeys(array &$source, array &$keys): mixed
@@ -49,7 +49,7 @@ final class InDeepFinder
     }
 
     /**
-     * @param array<mixed> $source
+     * @param array<mixed>            $source
      * @param array<non-empty-string> $keys
      */
     private static function hasForKeys(array &$source, array &$keys): bool

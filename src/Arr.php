@@ -7,7 +7,7 @@ namespace Folyod\Helpers;
 final readonly class Arr
 {
     /**
-     * @param array<mixed> $source
+     * @param array<mixed>     $source
      * @param non-empty-string $key
      */
     public static function has(array $source, string $key): bool
@@ -16,7 +16,7 @@ final readonly class Arr
     }
 
     /**
-     * @param array<mixed> $source
+     * @param array<mixed>     $source
      * @param non-empty-string $key
      * @param non-empty-string $separator
      */

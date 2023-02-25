@@ -11,7 +11,7 @@ final readonly class UnsafeArr
     /**
      * @see Arr::has()
      *
-     * @param array<mixed> $source
+     * @param array<mixed>     $source
      * @param non-empty-string $key
      * @param non-empty-string $separator
      */
@@ -23,7 +23,7 @@ final readonly class UnsafeArr
     /**
      * @see Arr::get()
      *
-     * @param array<mixed> $source
+     * @param array<mixed>     $source
      * @param non-empty-string $key
      * @param non-empty-string $separator
      */
