@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Folyod\Helpers\Services;
+namespace Folyod\Helpers\Services\Arr;
 
 final class InDeepFinder
 {

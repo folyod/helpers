@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Folyod\Helpers;
 
-use Folyod\Helpers\Services\InDeepFinder;
+use Folyod\Helpers\Services\Arr\InDeepFinder;
 
 final readonly class UnsafeArr
 {
